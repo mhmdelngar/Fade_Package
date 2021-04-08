@@ -41,7 +41,7 @@ It is simple
  ```
   ContainerF(
                 child: Container(
-                  height: 60,                    //this code will make your widget hide whin remaining days <=lastDaysToHideThis
+                  height: 60,                    //this code will make your widget hide when remaining days <=lastDaysToHideThis
                   width: 60,
                   color: Colors.red,
                 ),
