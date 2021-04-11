@@ -7,7 +7,7 @@
 you give the package the date that you and the client agreed to take the money 
 after that wrapping your widgets that you want them to hide and give them days before you want to hide 
 the package will do the rest (the application is going to fade in front of the client just like this) .
-<img src="ex.gif" width="200" height="350">
+![fade](ex.gif)
 
 
 # How to use it 
