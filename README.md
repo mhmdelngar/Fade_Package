@@ -1,52 +1,68 @@
 
 # Flutter Fade Package
- Flutter package that i created to help freelancers to guarantee their rights 
- 
- 
-# How it  works 
-you give the package the date that you and the client agreed to take the money 
-after that wrapping your widgets that you want them to hide and give them days before you want to hide 
-the package will do the rest (the application is going to fade in front of the client just like this) .
+
+The **Flutter Fade Package** is a tool designed to empower freelancers by ensuring their rights are protected. It allows you to make specific widgets in your app fade out after a predefined period, encouraging timely payment from clients.
+
+---
+
+## Features
+
+- Easily hide widgets based on a deadline.
+- Customizable fade-out timing.
+- Simple integration into your Flutter app.
+
+---
+
+## How It Works
+
+1. **Set the Deadline**: Specify the date when you expect payment from the client.
+2. **Wrap Your Widgets**: Use the provided widget wrapper to define elements that should fade out.
+3. **Automated Action**: The package will handle the rest, making the app fade out when the deadline approaches. 
+
+Example of the fading effect:  
 ![fade](ex.gif)
 
+---
 
-# How to use it 
-It is simple 
+## How to Use It
 
-## 1 
- first :
- wrap your material app with fade package 
- ```
- Fade(
-      paid: false,
-      //paidFunction: paidFunction,
+### Step 1: Wrap Your MaterialApp with the `Fade` Widget
 
-      // you can call your api here or any Future function
+First, integrate the `Fade` widget at the root of your app. Configure it with the payment status, deadline, and any functions you wish to execute.
 
-      dateTime: DateTime(2021, 4, 10),
-      materialApp: MaterialApp(
-        title: 'Fade',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: MyHomePage(title: 'Flutter Fade  Page'),
-      ),
-    );
- ```
+```dart
+Fade(
+  paid: false, // Set to true once payment is received
+  dateTime: DateTime(2021, 4, 10), // The agreed payment deadline
+  materialApp: MaterialApp(
+    title: 'Fade',
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+    ),
+    home: MyHomePage(title: 'Flutter Fade Page'),
+  ),
+);
+```
 
-## 2
- second :
- wrap your widget  with ContainerF and add last days to hide this
- 
- ```
-  ContainerF(
-                child: Container(
-                  height: 60,                    //this code will make your widget hide when remaining days <=lastDaysToHideThis
-                  width: 60,
-                  color: Colors.red,
-                ),
-                lastDaysToHideThis: 5, //this that tell your widget when to fade (days before fading)
-            ),
- ```
+### Step 2: Wrap Widgets with `ContainerF`
 
-that's it your app now is ready (don't let the client use you).
+Next, identify the widgets you want to hide as the deadline approaches. Wrap them with the `ContainerF` widget and specify the number of days before fading.
+
+```dart
+ContainerF(
+  child: Container(
+    height: 60, 
+    width: 60, 
+    color: Colors.red, // This widget will fade out when the deadline is near
+  ),
+  lastDaysToHideThis: 5, // Number of days before fading begins
+);
+```
+
+---
+
+## Ready to Go!
+
+That's it! Your app is now configured to fade widgets as needed. Don't let clients take advantage of your work—this package has your back.
+
+For any issues, suggestions, or contributions, feel free to reach out. 💪
